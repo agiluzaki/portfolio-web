@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio | Isya' Syechan Faedillah</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+<!-- Animated Background Canvas -->
+<div class="bg-animation"></div>
+
+<header class="header">
+    <div class="logo">ISYA'SF</div>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+    </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="home">
+    <div class="hero-container">
+        <div class="hero-text">
+            <h1>Hi, I'm <span>Isya' Syechan Faedillah</span></h1>
+            <p>
+                Front-End & Mobile App Developer dengan fokus
+                React Native, Firebase, dan IoT Monitoring System.
+            </p>
+            <a href="#projects" class="btn-primary">View My Projects</a>
+        </div>
+        <div class="hero-photo">
+            <!-- UKURAN NORMAL (SEPERTI SEBELUMNYA) -->
+            <img src="ijazah.png" alt="Isya Photo">
+        </div>
+    </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+    <h2>About Me</h2>
+    <div class="about-content">
+        <img src="pameran.jpeg" alt="About Me">
+        <p>
+            Lulusan S1 Teknik Komputer Universitas Telkom Surabaya dengan fokus
+            Front-End dan Mobile App Development. Berpengalaman membangun
+            aplikasi monitoring kualitas air berbasis Firebase & IoT.
+        </p>
+    </div>
+</section>
+
+<!-- SKILLS -->
+<section class="skills" id="skills">
+    <h2>Skill</h2>
+    <div class="skill-grid">
+        <div class="skill">HTML</div>
+        <div class="skill">CSS</div>
+        <div class="skill">JavaScript</div>
+        <div class="skill">React Native</div>
+        <div class="skill">Firebase</div>
+    </div>
+</section>
+
+<!-- PROJECT -->
+<section class="projects" id="projects">
+    <h2>Projects</h2>
+    <div class="project-card">
+        <div class="project-info">
+            <h3>Ecoshrimp – Smart Shrimp Farm Monitoring</h3>
+            <p>
+                Aplikasi mobile untuk pemantauan kualitas air tambak udang
+                secara realtime berbasis Firebase.
+            </p>
+            <div class="tech">
+                <span>React Native</span>
+                <span>Firebase</span>
+                <span>IoT</span>
+            </div>
+        </div>
+        <div class="project-image">
+            <img src="aplikasi.png" alt="Ecoshrimp App">
+        </div>
+    </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section class="experience" id="experience">
+    <h2>Experience</h2>
+
+    <div class="experience-big">
+        <img src="uji.jpeg" alt="Programmer Ecoshrimp">
+        <div>
+            <h3>Programmer – Ecoshrimp</h3>
+            <ul>
+                <li>Pengembangan aplikasi monitoring kualitas air</li>
+                <li>Integrasi Firebase Realtime Database</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="experience-big">
+        <img src="bspji.jpeg" alt="Magang BSIP Surabaya">
+        <div>
+            <h3>Magang – BSIP Surabaya (2024)</h3>
+            <ul>
+                <li>Pengujian EMC & dokumentasi</li>
+                <li>Menyiapkan alat Uji</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- EDUCATION -->
+<section class="education">
+    <h2>Education</h2>
+    <p><strong>S1 Teknik Komputer</strong> – Universitas Telkom Surabaya (2021–2025)</p>
+</section>
+
+<!-- SOCIAL -->
+<aside class="social">
+    <a href="https://www.linkedin.com/in/isya-syechan-faedillah" target="_blank">
+        <i class="fab fa-linkedin-in"></i>
+    </a>
+    <a href="https://github.com/agiluzaki" target="_blank">
+        <i class="fab fa-github"></i>
+    </a>
+    <div class="gmail">
+        <i class="fas fa-envelope"></i>
+        <span>agiluzaki@gmail.com</span>
+    </div>
+</aside>
+
+<!-- ================= CSS ================= -->
+<style>
+:root{
+    --bg:#020617;
+    --card:rgba(255,255,255,.06);
+    --accent:#38bdf8;
+    --text:#e5e7eb;
+    --muted:#94a3b8;
+}
+
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+body{background:var(--bg);color:var(--text);line-height:1.8;overflow-x:hidden;}
+
+/* ================= BACKGROUND ANIMATION ================= */
+.bg-animation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    background: linear-gradient(-45deg, #0c0c1a, #1a0f2e, #0a0a1a, #1e1a3a);
+    background-size: 400% 400%;
+    animation: gradientShift 15s ease infinite;
+}
+
+.bg-animation::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+        radial-gradient(circle at 20% 80%, rgba(56,189,248,0.15) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(59,130,246,0.15) 0%, transparent 50%),
+        radial-gradient(circle at 40% 40%, rgba(139,92,246,0.1) 0%, transparent 50%);
+    animation: float 20s ease-in-out infinite;
+}
+
+.bg-animation::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        conic-gradient(from 0deg at 50% 50%, transparent 0deg, rgba(56,189,248,0.03) 180deg, transparent 360deg),
+        conic-gradient(from 90deg at 30% 70%, rgba(16,185,129,0.04) 0deg, transparent 270deg);
+    animation: rotate 25s linear infinite;
+}
+
+/* Particle Effects */
+@keyframes particleFloat {
+    0%, 100% { transform: translateY(0px) rotate(0deg); opacity: 0.6; }
+    33% { transform: translateY(-20px) rotate(120deg); opacity: 0.3; }
+    66% { transform: translateY(-10px) rotate(240deg); opacity: 0.4; }
+}
+
+.particle-1, .particle-2, .particle-3, .particle-4 {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: radial-gradient(circle, var(--accent) 20%, transparent);
+    border-radius: 50%;
+    animation: particleFloat 12s ease-in-out infinite;
+}
+
+.particle-1 {
+    top: 20%;
+    left: 10%;
+    animation-delay: 0s;
+    animation-duration: 15s;
+}
+
+.particle-2 {
+    top: 60%;
+    right: 15%;
+    animation-delay: -3s;
+    animation-duration: 18s;
+}
+
+.particle-3 {
+    bottom: 30%;
+    left: 70%;
+    animation-delay: -6s;
+    animation-duration: 16s;
+}
+
+.particle-4 {
+    top: 80%;
+    left: 20%;
+    animation-delay: -9s;
+    animation-duration: 20s;
+}
+
+/* Keyframe Animations */
+@keyframes gradientShift {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px) scale(1); }
+    50% { transform: translateY(-20px) scale(1.05); }
+}
+
+@keyframes rotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* ================= HEADER ================= */
+.header{
+    position:sticky;
+    top:0;
+    z-index:100;
+    padding:1.2rem 5rem;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:rgba(2,6,23,.95);
+    backdrop-filter:blur(20px);
+    border-bottom: 1px solid rgba(56,189,248,0.2);
+}
+.logo{color:var(--accent);font-weight:700;font-size:1.1rem;}
+.header nav a{
+    margin-left:2rem;
+    color:#fff;
+    text-decoration:none;
+    font-weight:400;
+    position: relative;
+}
+.header nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background: var(--accent);
+    transition: width 0.3s ease;
+}
+.header nav a:hover::after {
+    width: 100%;
+}
+.header nav a:hover{color:var(--accent);}
+
+/* ================= SECTION GLOBAL ================= */
+section{
+    padding:5rem 5rem;
+    position: relative;
+    z-index: 1;
+}
+h2{
+    text-align:center;
+    margin-bottom:3rem;
+    font-size:2rem;
+    font-weight:600;
+    background: linear-gradient(135deg, var(--text) 0%, var(--accent) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* ================= HERO ================= */
+.hero{
+    min-height:90vh;
+    display:flex;
+    align-items:center;
+    position: relative;
+}
+.hero-container{
+    max-width:1200px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:1.2fr .8fr;
+    gap:4rem;
+    align-items:center;
+}
+.hero-text h1{
+    font-size:2.6rem;
+    font-weight:700;
+    line-height:1.3;
+}
+.hero-text span{color:var(--accent);}
+.hero-text p{
+    margin:1.8rem 0 2.5rem;
+    color:var(--muted);
+    max-width:520px;
+}
+.btn-primary{
+    padding:.9rem 2.4rem;
+    background:linear-gradient(135deg, var(--accent), #0ea5e9);
+    color:#020617;
+    border-radius:999px;
+    text-decoration:none;
+    font-weight:600;
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+}
+.btn-primary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+    transition: left 0.5s;
+}
+.btn-primary:hover::before {
+    left: 100%;
+}
+.hero-photo img{
+    width:260px;
+    height:340px;
+    object-fit:cover;
+    border-radius:26px;
+    box-shadow:0 25px 50px rgba(0,0,0,.55);
+    transition: transform 0.3s ease;
+}
+.hero-photo img:hover {
+    transform: translateY(-10px) scale(1.02);
+}
+
+/* ================= ABOUT ================= */
+.about-content{
+    max-width:1100px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:1fr 1.4fr;
+    gap:4rem;
+    align-items:center;
+}
+.about-content img{
+    width:100%;
+    height:400px;
+    object-fit:cover;
+    border-radius:30px;
+    transition: transform 0.4s ease;
+}
+.about-content img:hover {
+    transform: scale(1.05);
+}
+.about-content p{
+    color:var(--muted);
+    font-size:1rem;
+}
+
+/* ================= SKILLS ================= */
+.skill-grid{
+    max-width:900px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
+    gap:1.5rem;
+}
+.skill{
+    background:var(--card);
+    padding:1.2rem;
+    border-radius:18px;
+    text-align:center;
+    font-weight:500;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+.skill::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(56,189,248,0.2), transparent);
+    transition: left 0.5s;
+}
+.skill:hover::before {
+    left: 100%;
+}
+.skill:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(56,189,248,0.3);
+}
+
+/* ================= PROJECT ================= */
+.project-card{
+    max-width:1200px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:1fr 1.3fr;
+    gap:4rem;
+    background:var(--card);
+    padding:3rem;
+    border-radius:32px;
+    align-items:center;
+    transition: transform 0.3s ease;
+}
+.project-card:hover {
+    transform: translateY(-5px);
+}
+.project-info h3{margin-bottom:1rem;}
+.project-info p{
+    color:var(--muted);
+    margin-bottom:1.5rem;
+}
+.tech span{
+    display:inline-block;
+    margin-right:.6rem;
+    padding:.4rem 1rem;
+    background:rgba(255,255,255,.1);
+    border-radius:999px;
+    font-size:.85rem;
+}
+.project-image img{
+    width:100%;
+    height:420px;
+    object-fit:contain;
+    border-radius:26px;
+}
+
+/* ================= EXPERIENCE ================= */
+.experience{
+    max-width:1200px;
+    margin:auto;
+}
+.experience-big{
+    display:grid;
+    grid-template-columns:1.3fr 1fr;
+    gap:4rem;
+    margin-bottom:4rem;
+    align-items:center;
+}
+.experience-big img{
+    width:100%;
+    height:380px;
+    object-fit:cover;
+    border-radius:30px;
+}
+.experience-big ul{
+    margin-top:1rem;
+    padding-left:1.2rem;
+    color:var(--muted);
+}
+
+/* ================= EDUCATION ================= */
+.education{
+    text-align:center;
+    padding-bottom:6rem;
+}
+
+/* ================= SOCIAL ================= */
+.social{
+    position:fixed;
+    right:2.2rem;
+    top:50%;
+    transform:translateY(-50%);
+    display:flex;
+    flex-direction:column;
+    gap:1.2rem;
+    z-index: 100;
+}
+.social a,.gmail{
+    width:52px;
+    height:52px;
+    border-radius:50%;
+    background:rgba(255,255,255,.12);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#fff;
+    transition: all 0.3s ease;
+}
+.social a:hover, .gmail:hover {
+    background: var(--accent);
+    transform: translateX(-5px) scale(1.1);
+}
+.gmail{position:relative;cursor:pointer;}
+.gmail span{
+    position:absolute;
+    right:70px;
+    background:#020617;
+    padding:.6rem 1rem;
+    border-radius:14px;
+    white-space:nowrap;
+    opacity:0;
+    transform:translateX(10px);
+    transition:.3s;
+}
+.gmail:hover span{
+    opacity:1;
+    transform:translateX(0);
+}
+
+/* ================= RESPONSIVE ================= */
+@media(max-width:900px){
+    section{padding:4rem 2rem;}
+    .hero-container,
+    .about-content,
+    .project-card,
+    .experience-big{
+        grid-template-columns:1fr;
+        text-align:center;
+    }
+    .hero-photo img{margin:auto;}
+    .social{display:none;}
+    
+    /* Hide particles on mobile for performance */
+    .particle-1, .particle-2, .particle-3, .particle-4 {
+        display: none;
+    }
+}
+
+/* Add particles to body */
+body::before, body::after {
+    content: '';
+}
+</style>
+
+<!-- Add particles -->
+<div class="particle-1"></div>
+<div class="particle-2"></div>
+<div class="particle-3"></div>
+<div class="particle-4"></div>
+
+</body>
+</html>
